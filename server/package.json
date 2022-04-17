@@ -1,0 +1,25 @@
+{
+  "name": "hostel-management-system",
+  "version": "1.0.0",
+  "description": "A system for hostel management",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Bhavesh Chaudhari <bhic2030@gmail.com> (https://github.com/bhavesh-chaudhari)",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "http-status-codes": "^2.2.0",
+    "mongoose": "^6.3.0",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0"
+  }
+}
