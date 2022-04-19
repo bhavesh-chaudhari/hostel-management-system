@@ -30,7 +30,7 @@ app.use(
 );
 
 // routes
-app.use("/users", userRoutes)
+app.use("/api/v1/users", userRoutes)
 
 // read environment variables from .env
 const PORT = process.env.PORT || 5000;

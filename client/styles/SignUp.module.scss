@@ -1,0 +1,82 @@
+.signup-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 90vh;
+    // background: yellow;
+    .signup-content{
+        display: flex;
+        justify-content: center;
+        // background: red;
+        align-items: center;
+        flex-direction: column;
+        width: 40%;
+        min-width: 650px;
+        margin: 3rem 0;
+        // background: yellow;
+        & > h2{
+            color: $primary-900;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            background: white;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 1rem;
+            border-radius: 8px;
+            label{
+                margin-bottom: 5px;
+                font-size: 18px;
+            }
+            input{
+                margin-bottom: 12px;
+                padding: 8px;
+                border-radius: 3px;
+                outline: none;
+                border: 1px solid $primary-200;
+                font-size: 1rem;
+                transition: all 0.1s ease;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+                &:focus{
+                    border: 1px solid $primary-700;
+                }
+            }
+            .name-inputs{
+                display: flex;
+                justify-content: space-between;
+                .name{
+                    display: flex;
+                    flex-direction: column;
+                    width: 48%;
+                }
+            }
+            .form-actions{
+                button{
+                    background: $primary-100;
+                    padding: 6px 12px;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: none;
+                    border-radius: 5px;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+                    &:hover{
+                        background: $primary-50;
+                    }
+                }
+                  p{
+                        a{
+                            color: $primary-900;
+                            &:hover{
+                                color: $primary-800;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+}

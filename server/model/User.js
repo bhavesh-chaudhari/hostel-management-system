@@ -8,6 +8,15 @@ const UserSchema = new mongoose.Schema(
       maxlength: 50,
       required: [true, "Name is required"],
     },
+    rollNO: {
+      type: String,
+      required: true,
+    },
+    contactNo: {
+      type: Number,
+      required: true
+    },
+    roomNO
   },
   { timestamps: true }
 );
