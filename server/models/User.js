@@ -8,6 +8,11 @@ const UserSchema = new mongoose.Schema(
       maxlength: 50,
       required: [true, "Name is required"],
     },
+    email: {
+      type: String,
+      required: true,
+      unique: true
+    },
     rollNO: {
       type: String,
       required: true,
@@ -16,7 +21,21 @@ const UserSchema = new mongoose.Schema(
       type: Number,
       required: true
     },
-    roomNO
+    role: {
+      type: String,
+      required: true,
+      enum: ["user", "admin", "warden"],
+      default: "user"
+    },
+    status: {
+      type: String,
+      enum: ["pending", "active"],
+      default: "pending"
+    },
+    confirmationCode: {
+      type: String,
+      unique: true
+    }
   },
   { timestamps: true }
 );

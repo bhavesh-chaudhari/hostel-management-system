@@ -1,10 +1,10 @@
-.signup-container{
+.form-container{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 90vh;
     // background: yellow;
-    .signup-content{
+    .form-content{
         display: flex;
         justify-content: center;
         // background: red;
@@ -44,10 +44,10 @@
                     border: 1px solid $primary-700;
                 }
             }
-            .name-inputs{
+            .inputs{
                 display: flex;
                 justify-content: space-between;
-                .name{
+                .input{
                     display: flex;
                     flex-direction: column;
                     width: 48%;
@@ -80,3 +80,12 @@
         }
     }
 }
+
+// .login-container{
+//     .form-container{
+//         align-items: center;
+//         .form-content{
+//             margin-top: 0;
+//         }
+//     }
+// }

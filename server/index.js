@@ -1,12 +1,13 @@
-import express from "express"
-import dotenv from "dotenv"
+import express from "express";
+import dotenv from "dotenv";
 import session from "express-session";
-import cors from "cors"
+import cors from "cors";
 import CONNECT_DB from "./db/connect.js";
-import userRoutes from "./routes/users.js"
+import userRoutes from "./routes/users.js";
+import authRoutes from "./routes/auth.js";
 
 // initialize app
-const app = express()
+const app = express();
 
 // configure dotenv
 dotenv.config({ path: "./config/.env" });
@@ -25,12 +26,12 @@ app.use(
     secret: "_cold_",
     resave: false,
     saveUninitialized: true,
-    // cookie: { secure: true },
   })
 );
 
 // routes
-app.use("/api/v1/users", userRoutes)
+app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/auth", authRoutes);
 
 // read environment variables from .env
 const PORT = process.env.PORT || 5000;
@@ -41,7 +42,7 @@ const startServer = async () => {
   try {
     await CONNECT_DB(MONGO_URI);
     app.listen(PORT, () => {
-    //   console.log("Database connected");
+      //   console.log("Database connected");
       console.log(`server is listening on port ${PORT}`);
     });
   } catch (error) {
