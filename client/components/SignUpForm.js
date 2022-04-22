@@ -1,20 +1,50 @@
-import React from 'react'
-import styles from "../styles/Form.module.scss"
-import Link from "next/link"
+import React, { useState } from "react";
+import styles from "../styles/Form.module.scss";
+import Link from "next/link";
+import DatePicker from "react-date-picker/dist/entry.nostyle";
+import "react-date-picker/dist/DatePicker.css";
+import "react-calendar/dist/Calendar.css";
+
+const initalValues = {
+  firstname: "",
+  lastname: "",
+  rollNo: "",
+  course: "",
+  contactNo: "",
+  // dob: new Date(),
+  guardianNo: "",
+  email: "",
+  roomPref: "",
+  gender: "",
+  password: "",
+};
 
 const SignUpForm = () => {
+  const [formValues, setFormValues] = useState(initalValues);
+  const [date, onDateChange] = useState(new Date());
 
+  console.log(date)
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("clicked on register");
   };
-  
+
+  console.log(formValues)
+
   return (
     <form onSubmit={handleSubmit}>
       <div className={styles["inputs"]}>
         <div className={styles["input"]}>
           <label htmlFor="firstname">First Name</label>
-          <input type="text" id="firstname" />
+          <input
+            value={formValues.firstname}
+            onChange={(e) =>
+              setFormValues({ ...initalValues, firstname: e.target.value })
+            }
+            type="text"
+            id="firstname"
+          />
         </div>
         <div className={styles["input"]}>
           <label htmlFor="lastname">Last Name</label>
@@ -41,7 +71,8 @@ const SignUpForm = () => {
         </div>
         <div className={styles["input"]}>
           <label htmlFor="dob">Date Of Birth</label>
-          <input type="text" id="dob" />
+          {/* <input type="text" id="dob" /> */}
+          <DatePicker onChange={onDateChange} value={date} />
         </div>
       </div>
       <div className={styles["inputs"]}>
@@ -93,6 +124,6 @@ const SignUpForm = () => {
       </div>
     </form>
   );
-}
+};
 
-export default SignUpForm
+export default SignUpForm;

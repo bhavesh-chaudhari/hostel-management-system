@@ -2,16 +2,22 @@ import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema(
   {
-    name: {
+    firstname: {
       type: String,
       minlength: 3,
       maxlength: 50,
-      required: [true, "Name is required"],
+      required: [true, "First Name is required"],
+    },
+    lastname: {
+      type: String,
+      minlength: 3,
+      maxlength: 50,
+      required: [true, "Last Name is required"],
     },
     email: {
       type: String,
       required: true,
-      unique: true
+      unique: true,
     },
     rollNO: {
       type: String,
@@ -19,23 +25,23 @@ const UserSchema = new mongoose.Schema(
     },
     contactNo: {
       type: Number,
-      required: true
+      required: true,
     },
     role: {
       type: String,
       required: true,
       enum: ["user", "admin", "warden"],
-      default: "user"
+      default: "user",
     },
     status: {
       type: String,
       enum: ["pending", "active"],
-      default: "pending"
+      default: "pending",
     },
     confirmationCode: {
       type: String,
-      unique: true
-    }
+      unique: true,
+    },
   },
   { timestamps: true }
 );
