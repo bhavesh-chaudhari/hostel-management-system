@@ -14,18 +14,39 @@ const UserSchema = new mongoose.Schema(
       maxlength: 50,
       required: [true, "Last Name is required"],
     },
+    rollNo: {
+      type: String,
+      required: true,
+    },
+    course: {
+      type: String,
+      enum: ["cse", "ece"],
+    },
+    contactNo: {
+      type: Number,
+      required: true,
+    },
+    dob: {
+      type: Date,
+    },
+    guardianNO: {
+      type: Number,
+    },
     email: {
       type: String,
       required: true,
       unique: true,
     },
-    rollNO: {
+    roomPref: {
       type: String,
-      required: true,
+      enum: ["single", "double", "triple"],
     },
-    contactNo: {
-      type: Number,
-      required: true,
+    gender: {
+      type: String,
+      enum: ["male", "female", "other"],
+    },
+    password: {
+      type: String,
     },
     role: {
       type: String,
@@ -38,10 +59,10 @@ const UserSchema = new mongoose.Schema(
       enum: ["pending", "active"],
       default: "pending",
     },
-    confirmationCode: {
-      type: String,
-      unique: true,
-    },
+    // confirmationCode: {
+    //   type: String,
+    //   unique: true,
+    // },
   },
   { timestamps: true }
 );

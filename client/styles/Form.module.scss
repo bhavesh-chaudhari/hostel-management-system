@@ -11,6 +11,7 @@
     align-items: center;
     flex-direction: column;
     min-width: 650px;
+    max-width: 650px;
     margin: 3rem 0;
     // background: yellow;
     & > h2 {
@@ -79,11 +80,15 @@
           }
         }
         p {
+          margin: 10px 0;
           a {
             color: $primary-900;
             &:hover {
               color: $primary-800;
             }
+          }
+          span{
+            color: red;
           }
         }
       }

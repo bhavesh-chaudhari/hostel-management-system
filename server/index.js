@@ -5,9 +5,12 @@ import cors from "cors";
 import CONNECT_DB from "./db/connect.js";
 import userRoutes from "./routes/users.js";
 import authRoutes from "./routes/auth.js";
+import passport from "passport";
+import passportStrategy from "./config/passportConfig.js"
 
 // initialize app
 const app = express();
+app.use(express.json())
 
 // configure dotenv
 dotenv.config({ path: "./config/.env" });
@@ -28,6 +31,11 @@ app.use(
     saveUninitialized: true,
   })
 );
+
+// passport 
+app.use(passport.initialize())
+app.use(passport.session())
+passportStrategy(passport)
 
 // routes
 app.use("/api/v1/users", userRoutes);
