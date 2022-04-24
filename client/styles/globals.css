@@ -49,6 +49,38 @@ a {
   
 }
 
+.item {
+  background: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--fixed-width);
+  margin: 2rem auto;
+  align-items: center;
+  border-radius: var(--radius);
+}
+
+.item button,.item a {
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+}
+
+.item {
+  padding: 1rem 2rem;
+  width: 500px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(209, 221, 237);
+  margin-left: 300px;
+}
+
+.item h4 {
+  margin-bottom: 0;
+  padding: 5px;
+}
+
 .pic{
     height: 500px;
     width: 500px;
@@ -70,6 +102,9 @@ a {
   
 }
 
+
+
+
 .sideBar{
   width: 15vw;
   height: 100vw;
@@ -78,16 +113,21 @@ a {
 
 .sideBar_links{
   color: black;
-  font-size: x-large;
+  font-size: 1.5vw;
 }
 
+.side_icon{
+  width: 1.5vw;
+  height: 1.5vw;
+
+}
 
 .sidecomp{
   padding: 20px;
   font-size: x-large;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 }
 
 .Hostelphoto{
@@ -144,14 +184,15 @@ a {
 
 .notice{
   margin-top: 20px;
-  align-content: center;
-  justify-self: center;
+  /* align-content: center;
+  justify-self: center; */
   width: 30vw;
   margin-left: 35vw;
   height: 15vw;
   border-radius: 10px;
   background-color: rgb(147, 172, 210);
   padding: 20px;
+  box-shadow: 4px 4px 10px  #2f2f2f;
 }
 
 .notice_title{
@@ -159,11 +200,11 @@ a {
   margin-left: -20px;
   height:3vw;
   width: 30vw;
-  padding-top: 5px;
+  padding: 1vw 0vw;
   border-radius: 10px 10px 0px 0px;
   background-color: rgb(53, 123, 188);
   text-align: center;
-
+  font-size: 1vw;
 }
 
 .notice_p{

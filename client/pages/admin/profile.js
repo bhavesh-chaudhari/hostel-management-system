@@ -10,7 +10,6 @@ export const users = () => {
       
     <div className='profile'>
       <SideBar/>
-
         <h2></h2>
     </div>
     <div className='tempdiv' >  
