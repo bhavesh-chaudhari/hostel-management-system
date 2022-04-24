@@ -1,9 +1,21 @@
-const index = () => {
-  return <div>Hostel Managment System <br /> <a href="http://localhost:5000/users">Visit Api</a>
-  <br></br>
-  <a href="http://localhost:3000/tp_dashboard">DASHBOARD</a>
-  </div>;
+import Head from "next/head";
+import styles from "../styles/Home.module.scss"
 
+const index = () => {
+  return (
+    <>
+    <Head>
+      <title>Hostel Management System | IIITN</title>
+    </Head>
+      <div className={styles["home-container"]}>
+        <div className={styles["home-content"]}>
+          <div className={styles["heading"]}>
+            <h1>IIITN - Hostel Management System</h1>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default index;
