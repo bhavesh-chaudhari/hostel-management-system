@@ -1,0 +1,14 @@
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    // background: url("../public/images/homebg.jpeg") no-repeat;
+    background-size: cover;
+    .home-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
