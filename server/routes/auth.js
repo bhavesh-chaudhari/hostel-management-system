@@ -1,12 +1,12 @@
 import express from "express";
-import {login, signup} from "../controllers/auth.js"
+import {login, signup, logout, authenticatedUser, forgotPassword, resetPassword, confirmUserEmail} from "../controllers/auth.js"
 
 // load user model
 import User from "../models/User.js";
 
 const router = express.Router();
 
-// @route   POST /signup
+// @route   GET /test
 // @desc    Test auth route
 // @access  Public
 router.get("/test", (req, res) => {
@@ -22,5 +22,21 @@ router.post("/signup", signup);
 // @desc    Login user
 // @access  Public
 router.post("/login", login);
+
+// @route   GET /logout
+// @desc    Logout user
+// @access  Private
+router.get("/logout", logout)
+
+// @route   GET /authenticatedUser
+// @desc    Get Authenticated User
+// @access  Private
+router.get("/authenticatedUser", authenticatedUser);
+
+router.get("/confirm-mail/:confirmationCode", confirmUserEmail)
+
+router.post("/forgot-password", forgotPassword)
+
+router.post("/reset-password", resetPassword)
 
 export default router;

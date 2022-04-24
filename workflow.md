@@ -37,3 +37,9 @@
 ### Thoughts
 - for login take official email and password
 - rooms will be alloted by admin
+
+### Done
+- Registration Backend Done, frontend validation remaining
+- Login Backend Done
+- Email integration done
+- Email verification done

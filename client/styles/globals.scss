@@ -8,3 +8,11 @@
 a {
   text-decoration: none;
 }
+
+:root {
+  --toastify-color-light: white !important;
+  --toastify-color-progress-light:linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%) !important;
+  --toastify-text-color-light: #336fc3 !important;
+  --toastify-color-progress-success: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%) !important;
+  --toastify-color-progress-info: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%) !important;
+}

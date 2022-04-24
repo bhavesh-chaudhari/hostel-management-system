@@ -1,27 +1,30 @@
 import User from "../models/User.js";
-import bcrypt from "bcryptjs"
-import passportLocal from "passport-local"
+import bcrypt from "bcryptjs";
+import passportLocal from "passport-local";
 
-const localStrategy = passportLocal.Strategy
+const localStrategy = passportLocal.Strategy;
 
-const passportStrategy = (passport)=>{
-    
+const passportStrategy = (passport) => {
   passport.use(
     new localStrategy(
-      { usernameField: "email", passwordField: "password" },
-      (username, password, done) => {
-        User.findOne({ email: username }, (err, user) => {
-          if (err) throw err;
-          if (!user) return done(null, false);
-          bcrypt.compare(password, user.password, (err, result) => {
+      { usernameField: "rollNo", passwordField: "password" },
+      async (username, password, done) => {
+        try {
+          await User.findOne({ rollNo: username }, (err, user) => {
             if (err) throw err;
-            if (result === true) {
-              return done(null, user);
-            } else {
-              return done(null, false);
-            }
-          });
-        });
+            if (!user) return done(null, false);
+            bcrypt.compare(password, user.password, (err, result) => {
+              if (err) throw err;
+              if (result === true) {
+                return done(null, user);
+              } else {
+                return done(null, false);
+              }
+            });
+          }).clone();
+        } catch (error) {
+          console.log(error);
+        }
       }
     )
   );
@@ -37,6 +40,6 @@ const passportStrategy = (passport)=>{
       done(err, user);
     });
   });
-}
+};
 
-export default passportStrategy
+export default passportStrategy;

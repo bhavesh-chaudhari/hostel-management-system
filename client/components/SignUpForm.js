@@ -5,6 +5,8 @@ import DatePicker from "react-date-picker/dist/entry.nostyle";
 import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
 import { PulseLoader } from "react-spinners";
+import { toast } from "react-toastify";
+
 
 const initalValues = {
   firstname: "",
@@ -45,6 +47,8 @@ const SignUpForm = () => {
     });
     if(response.status === 200){
       setShow(true)
+      toast.success("Registered successfully")
+      toast.info(`Confirmation email sent`)
     }
     setLoading(false);
     const data = await response.json();

@@ -59,10 +59,10 @@ const UserSchema = new mongoose.Schema(
       enum: ["pending", "active"],
       default: "pending",
     },
-    // confirmationCode: {
-    //   type: String,
-    //   unique: true,
-    // },
+    confirmationCode: {
+      type: String,
+      unique: true,
+    },
   },
   { timestamps: true }
 );
