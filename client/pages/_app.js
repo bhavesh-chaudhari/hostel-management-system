@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 
 const navbarPaths = ["/", "/login", "/signup", "/gallery"];
 
+
+
 function MyApp({ Component, pageProps }) {
 
   const router = useRouter();
