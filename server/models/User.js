@@ -17,6 +17,7 @@ const UserSchema = new mongoose.Schema(
     rollNo: {
       type: String,
       required: true,
+      unique: true
     },
     course: {
       type: String,
@@ -35,7 +36,7 @@ const UserSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
+      // unique: true,
     },
     roomPref: {
       type: String,
@@ -61,7 +62,9 @@ const UserSchema = new mongoose.Schema(
     },
     confirmationCode: {
       type: String,
-      unique: true,
+    },
+    image: {
+      type: String,
     },
   },
   { timestamps: true }

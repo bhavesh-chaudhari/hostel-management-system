@@ -4,9 +4,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const PageLayout = ({ children }) => {
+
+  
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar/>
       {children}
       <ToastContainer
         position="bottom-right"
