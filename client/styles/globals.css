@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  /* background: var(--clr-primary-5); */
+  color: var(--clr-white);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius);
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1rem;
+  letter-spacing: var(--spacing);
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  background-color: rgb(114, 183, 240);
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: var(--clr-primary-1);
+  color: var(--clr-primary-5);
+  background-color: rgb(14, 226, 205);
+  box-shadow: 15px ;
+}
+
+.contactus{
+  padding: 20px;
+}
+
+.desc{
+  height:500px;
+  width: 1000px;
+  margin-top: -580px;
+  margin-left: 800px;
+  text-align: center;
+  
+}
+
+.item {
+  background: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--fixed-width);
+  margin: 2rem auto;
+  align-items: center;
+  border-radius: var(--radius);
+}
+
+.item button,.item a {
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+}
+
+.item {
+  padding: 1rem 2rem;
+  width: 500px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(209, 221, 237);
+  margin-left: 300px;
+}
+
+.item h4 {
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+.pic{
+    height: 500px;
+    width: 500px;
+}
+
+.prof_impdetails{
+        margin-left :25vw;
+}
+
+.prof_h{
+  padding:20px;
+}
+
+
+.remarks{
+  margin-left: 8vw;
+  margin-top: -10px;
+  padding: 15px;
+  
+}
+
+
+
+
+.sideBar{
+  width: 15vw;
+  height: 100vw;
+  background-color: rgba(119, 171, 170, 0.573);
+}
+
+.sideBar_links{
+  color: black;
+  font-size: 1.5vw;
+}
+
+.side_icon{
+  width: 1.5vw;
+  height: 1.5vw;
+
+}
+
+.sidecomp{
+  padding: 20px;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hostelphoto{
+  align-items: flex-start;
+  height: 600px;
+  width: 800px;
+}
+
+.howtoreach{
+  margin-top: 65px;
+  height: 200px;
+  width: 1000px;
+  
+}
+
+.links{
+  font-size: large;
+}
+
+.links:hover{
+  z-index: 2;
+  font-size: x-large;
+  color: aqua;
+}
+
+.til{
+  font-size: xx-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: bold;
+  padding: 25px;
+  text-align: left;
+}
+
+.tp_h{
+  margin-top: 0;
+  text-align: center;
+
+}
+
+.tp_p{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fbody {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+  margin-bottom: 5px;
+
+}
+
+.notice{
+  margin-top: 20px;
+  /* align-content: center;
+  justify-self: center; */
+  width: 30vw;
+  margin-left: 35vw;
+  height: 15vw;
+  border-radius: 10px;
+  background-color: rgb(147, 172, 210);
+  padding: 20px;
+  box-shadow: 4px 4px 10px  #2f2f2f;
+}
+
+.notice_title{
+  margin-top: -20px;
+  margin-left: -20px;
+  height:3vw;
+  width: 30vw;
+  padding: 1vw 0vw;
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgb(53, 123, 188);
+  text-align: center;
+  font-size: 1vw;
+}
+
+.notice_p{
+  margin-top: 15px;
+}
+
+.profpic{
+  border-radius: 100%;
+  position: absolute;
+  /* margin:0 auto; */
+  height:300px;
+  width:300px;
+  background-color: rgb(196, 130, 175);
+  /* margin-top: -150px; */
+  box-shadow: 3px 3px 10px rgb(98, 12, 84);
+  
+}
+
+.tempdiv{
+  width:100vw;
+  height:300px;
+  
+  margin-top: -150px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.profile{
+  background-color: rgb(169, 162, 162);
+  border-bottom: 10px black;
+  height: 200px;
+  box-shadow: 3px 7px 20px rgb(77, 72, 72);
+}
+
+.prof_t{
+  /* padding: 25px; */
+  margin: 25px;
+  text-align: center;
+}
+
+
+
+.whi {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+
+}
+
+
+/* ANIMATIONS */
+
+#htr {
+  animation-timing-function: ease;
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 300px;
+  }
+}
+

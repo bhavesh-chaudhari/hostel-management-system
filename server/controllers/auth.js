@@ -30,7 +30,7 @@ export const login = (req, res, next) => {
 };
 
 export const signup = async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   try {
     const user = await User.findOne({ rollNo: req.body.rollNo });
     if (user) res.status(409).json({ message: "user already exists" });
@@ -41,7 +41,7 @@ export const signup = async (req, res) => {
 
       const { password, ...handleUser } = req.body;
 
-      console.log(handleUser);
+      // console.log(handleUser);
 
       // create confirmation token
       const token = jwt.sign(
