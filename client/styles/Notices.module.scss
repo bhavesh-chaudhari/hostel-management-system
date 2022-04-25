@@ -1,0 +1,55 @@
+.notices-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .notices-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    padding: 3rem 0;
+    position: relative;
+    & > h2 {
+      font-size: 2rem;
+      color: $primary-600;
+      margin-bottom: 2rem;
+    }
+    a{
+      position: absolute;
+      top: 3rem;
+      right: 0;
+      padding: 8px 16px;
+      background: white;
+      border: 1px solid $primary-300;
+      cursor: pointer;
+      font-size: 1rem;
+      border: 1px solid $primary-500;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+      &:hover {
+        color: $primary-500;
+      }
+    }
+  }
+}
+
+.notice-card {
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  padding: 1rem;
+  padding-left: 3.5rem;
+  position: relative;
+  border: 1px solid $primary-50;
+  h2 {
+    margin-bottom: 1rem;
+  }
+  .notice-no {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 12px;
+    background: $primary-50;
+    border-bottom-right-radius: 20px;
+  }
+}

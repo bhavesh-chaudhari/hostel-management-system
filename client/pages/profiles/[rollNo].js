@@ -3,31 +3,11 @@ import React, { useState, useEffect } from "react";
 import Profile from "../../components/Profile";
 
 const index = ({ user }) => {
-  // useEffect(() => {
-  //   if(!router.isReady) return
-  //   const rollNo = router.query.rollNo
-
-  //   console.log(rollNo)
-
-  //   fetch(`http://localhost:5000/api/v1/users/${rollNo}`, {
-  //     method: "GET",
-  //     credentials: "include",
-  //     headers: { "Content-type": "application/json" },
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setUser(data.user)
-  //       console.log(data);
-  //     });
-  // }, []);
-
-  console.log(user)
-
   return <Profile user={user} />;
 };
 
 export const getStaticProps = async ({ params }) => {
-  console.log("roll no. is: ", params.rollNo);
+  // console.log("roll no. is: ", params.rollNo);
 
   const res = await fetch(`http://localhost:5000/api/v1/users/${params.rollNo}`, {
     method: "GET",
@@ -37,11 +17,11 @@ export const getStaticProps = async ({ params }) => {
 
   const data = await res.json();
 
-  console.log("user page for: ", data.user);
+  // console.log("user page for: ", data.user);
 
   const {password, ...profileUser} = data.user
 
-  console.log(profileUser)
+  // console.log(profileUser)
 
   return {
     props: {

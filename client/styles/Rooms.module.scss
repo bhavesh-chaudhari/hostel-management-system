@@ -1,0 +1,30 @@
+.rooms-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rooms-content{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        padding: 3rem 0;
+        .col{
+            width: 33%;
+            text-align: center;
+            p{
+                padding: 1rem 0;
+                background: greenyellow;
+                margin: 1rem;
+                border-radius: 10px;
+            }
+            .green{
+                background: greenyellow;
+            }
+            .red{
+                background: red;
+            }
+            .yellow{
+                background: yellow;
+            }
+        }
+    }
+}

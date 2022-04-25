@@ -23,6 +23,7 @@ const SideBar = () => {
   return (
     <div className={styles["sidebar-container"]}>
       <div className={styles["header"]}>
+        <p>{router.asPath}</p>
         <button onClick={logout}>Logout</button>
       </div>
       <div className={styles["sidebar-content"]}>
@@ -43,16 +44,40 @@ const SideBar = () => {
         </div>
         <div className={styles["sidebar-menu"]}>
           <Link href="/profiles" passHref>
-            <a>Profiles</a>
+            <a
+              className={
+                router.pathname === "/profiles" ? styles["active"] : null
+              }
+            >
+              Profiles
+            </a>
           </Link>
           <Link href="/notices" passHref>
-            <a>Notices</a>
+            <a
+              className={
+                router.pathname === "/notices" ? styles["active"] : null
+              }
+            >
+              Notices
+            </a>
           </Link>
           <Link href="/grievances" passHref>
-            <a>Grievances</a>
+            <a
+              className={
+                router.pathname === "/grievances" ? styles["active"] : null
+              }
+            >
+              Grievances
+            </a>
           </Link>
           <Link href="/rooms" passHref>
-            <a>Rooms</a>
+            <a
+              className={
+                router.pathname === "/rooms" ? styles["active"] : null
+              }
+            >
+              Rooms
+            </a>
           </Link>
         </div>
       </div>

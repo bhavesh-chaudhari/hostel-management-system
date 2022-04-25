@@ -1,10 +1,21 @@
 import Grievance from "../models/Grievance.js";
 
-export const getAllGrievances = async (req, res) => {};
+export const getAllGrievances = async (req, res) => {
+  try {
+    const allGrievances = await Grievance.find();
 
-export const getGrievance = async (req, res) => {};
+    res.status(200).json({ grievances: allGrievances });
+  } catch (error) {
+    console.log(error);
+  } 
+};
+
+export const getGrievance = async (req, res) => {
+
+};
 
 export const createGrievance = async (req, res) => {
+  console.log("create gri")
     try {
       const grievance = req.body;
 

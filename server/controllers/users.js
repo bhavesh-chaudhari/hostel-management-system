@@ -31,3 +31,18 @@ export const getUser = async (req, res) => {
   }
 };
 
+export const getUserWithId = async (req, res) => {
+  try {
+    const userId = req.params.id
+    const user = await User.findOne({ _id: userId });
+
+    if (!user) {
+      res.status(404).json({ message: "no user with given id" });
+      return;
+    }
+
+    res.status(200).json({ user: user });
+  } catch (error) {
+    res.status(400).json(error);
+  }
+};
