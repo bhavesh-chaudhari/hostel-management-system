@@ -60,8 +60,8 @@ export const signup = async (req, res) => {
       const link = `http://localhost:3000/confirm-mail/${token}`;
 
       sendMail(
-        "bhic2030@gmail.com",
-        // `${newUser.rollNo.toLowerCase()}@iiitn.ac.in`,
+        // "bhic2030@gmail.com",
+        `${newUser.rollNo.toLowerCase()}@iiitn.ac.in`,
         "Registered successfully",
         "wow nice bro",
         `<h1>You have successfully registered for IIITN Hostel. Click below email verification link to activate your account.<h1/>
