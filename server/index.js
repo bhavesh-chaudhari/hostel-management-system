@@ -3,10 +3,12 @@ import dotenv from "dotenv";
 import session from "express-session";
 import cors from "cors";
 import CONNECT_DB from "./db/connect.js";
-import userRoutes from "./routes/users.js";
-import authRoutes from "./routes/auth.js";
 import passport from "passport";
 import passportStrategy from "./config/passportConfig.js"
+import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/users.js";
+import noticeRoutes from "./routes/notices.js"
+import grievanceRoutes from "./routes/grievances.js" 
 
 // initialize app
 const app = express();
@@ -40,6 +42,8 @@ passportStrategy(passport)
 // routes
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/notices", noticeRoutes)
+app.use("/api/v1/grievances", grievanceRoutes)
 
 // read environment variables from .env
 const PORT = process.env.PORT || 5000;

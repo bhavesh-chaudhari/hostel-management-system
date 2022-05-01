@@ -13,6 +13,9 @@ const GrievanceSchema = new mongoose.Schema(
     description: {
       type: String,
     },
+    user: {
+      type: String
+    }
   },
   { timestamps: true }
 );

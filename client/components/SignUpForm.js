@@ -48,7 +48,7 @@ const SignUpForm = () => {
     if(response.status === 200){
       setShow(true)
       toast.success("Registered successfully")
-      toast.info(`Confirmation email sent`)
+      toast.info(`Confirmation email sent`, {delay: 1000})
     }
     setLoading(false);
     const data = await response.json();
@@ -163,7 +163,7 @@ const SignUpForm = () => {
         <div className={styles["input"]}>
           <label htmlFor="roomPref">Room Preference</label>
           <select
-            value={"triple"}
+            value={formValues.roomPref}
             onChange={(e) =>
               setFormValues({ ...formValues, roomPref: e.target.value })
             }

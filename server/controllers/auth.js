@@ -46,8 +46,7 @@ export const signup = async (req, res) => {
       // create confirmation token
       const token = jwt.sign(
         { rollNo: req.body.rollNo },
-        process.env.JWT_SECRET,
-        { expiresIn: "1h" }
+        process.env.JWT_SECRET
       );
 
       const newUser = new User({
@@ -60,19 +59,19 @@ export const signup = async (req, res) => {
 
       const link = `http://localhost:3000/confirm-mail/${token}`;
 
-      // sendMail(
-      //   // "bhic2030@gmail.com",
-      //   // `${newUser.rollNo.toLowerCase()}@iiitn.ac.in`,
-      //   "Registered successfully",
-      //   "wow nice bro",
-      //   `<h1>You have successfully registered for IIITN Hostel. Click below email verification link to activate your account.<h1/>
-      //   <a href='${link}'>Confirm Your Email</a>
-      //   </br>
-      //   <p>*Link only valid for 2 hours</p>
-      //   `
-      // )
-      //   .then((res) => console.log(res))
-      //   .catch((error) => console.log(error));
+      sendMail(
+        // "bhic2030@gmail.com",
+        `${newUser.rollNo.toLowerCase()}@iiitn.ac.in`,
+        "Registered successfully",
+        "wow nice bro",
+        `<h1>You have successfully registered for IIITN Hostel. Click below email verification link to activate your account.<h1/>
+        <a href='${link}'>Confirm Your Email</a>
+        </br>
+        <p>*Link only valid for 2 hours</p>
+        `
+      )
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error));
 
       return res
         .status(200)

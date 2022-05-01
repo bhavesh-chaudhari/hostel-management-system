@@ -1,0 +1,51 @@
+.profiles-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    .profiles-content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 4rem 0;
+        width: 70%;
+    }
+}
+
+.profile-card{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    padding: 1rem;
+    position: relative;
+    color: $primary-500;
+    border: 1px solid $primary-50;
+    .name{
+        display: flex;
+        justify-content: center;
+        margin-left: 3rem;
+        flex-direction: column;
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            &:nth-of-type(1){
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+        }
+    }
+    .room{
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        span{
+            background: $primary-50;
+            border-radius: 20px;
+            padding: 1px 10px;
+        }
+    }
+}

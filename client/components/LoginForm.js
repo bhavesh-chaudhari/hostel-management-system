@@ -29,7 +29,7 @@ const LoginForm = () => {
 
     if (response.status === 200) {
       if (data.loggedInUser.role === "user") {
-        router.replace(`/profile/${data.loggedInUser.rollNo.toLowerCase()}`);
+        router.replace(`/profiles/${data.loggedInUser.rollNo.toLowerCase()}`);
       } else {
         router.replace("/dashboard");
       }
